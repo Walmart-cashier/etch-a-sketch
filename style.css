@@ -1,0 +1,39 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family:sans-serif;
+}
+
+body {
+   background: rgb(255,255,255);
+background: radial-gradient(circle, rgba(255,255,255,1) 27%, rgba(159,158,158,1) 88%, rgba(140,139,139,1) 100%);
+background-size: 100vw 100vw;
+}
+
+.maincontainer {
+    width: 70vw;
+    height: 70vh;
+    margin: 5vh auto;
+    background-color: white;
+    display: grid;
+    grid-template-columns:repeat(16,1fr);
+    grid-template-rows:repeat(16,1fr);
+}
+
+.box{
+    border: .5px solid rgba(219, 219, 219, 0.26);
+    width: auto;
+    height: auto;
+}
+
+.button-div {
+    margin: 0 auto;
+    width: 40vw;
+}
+
+.dbutton{
+    font-size: 1.1rem;
+    margin-left: 2rem;
+    padding: .3rem;
+}
