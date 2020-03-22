@@ -36,6 +36,45 @@ gray_button.onclick=function(){
     
 }
 
+let colorbutton=document.querySelector('#color_button');
+colorbutton.onclick=function(){
+    let boxes=document.querySelectorAll('.box');
+    boxes.forEach((val)=>{
+        val.addEventListener('mouseover',function(){
+           let randomColor= '#'+Math.floor(Math.random()*16777215).toString(16);
+            val.style.backgroundColor=randomColor;
+            val.style.transition='0.3s';
+        });
+    })
+};
+
+function colorpallete(){
+    let palletes=document.querySelectorAll('.palletes img');
+    palletes.forEach((value)=>{
+        value.addEventListener('click',()=>{
+            if(value.dataset.val==1)
+                {
+                    let arrcolor=['#f76a8c','#f8dc88','#f8fab8','#ccf0e1'];
+                    setcolorpallete(arrcolor);
+                }
+            else if(value.dataset.val==2)
+                {
+                    let arrcolor=['#a8d8ea','#aa96da','#fcbad3','#ffffd2'];
+                    setcolorpallete(arrcolor);
+                }
+           else  if(value.dataset.val==3)
+                {
+                    let arrcolor=['#edffea','#75daad','#216353','#7a4d1d'];
+                    setcolorpallete(arrcolor);
+                }
+           else  if(value.dataset.val==4)
+                {
+                    let arrcolor=['#f1fcfc','#40e0d0','#72b5b7','#633a82'];
+                    setcolorpallete(arrcolor);
+                }
+        })
+    })
+}
 function action(grid=16){
     let maincontainer=document.querySelector('.maincontainer');
     for(let i=0;i<grid * grid ;i++)
@@ -54,7 +93,19 @@ function action(grid=16){
     })
 }
 
-
+function setcolorpallete(arr)
+{
+     let boxes=document.querySelectorAll('.box');
+    boxes.forEach((val)=>{
+        val.addEventListener('mouseover',function(){
+           let randomNum=Math.floor((Math.random() * 4) + 0);
+           let randomColor=arr[randomNum];
+            val.style.backgroundColor=randomColor;
+            val.style.transition='0.3s';
+        });
+    })
+}
+colorpallete();
 
 
 
