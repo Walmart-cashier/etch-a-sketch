@@ -6,8 +6,10 @@
 }
 
 body {
+ 
    background: rgb(255,255,255);
 background: radial-gradient(circle, rgba(255,255,255,1) 27%, rgba(159,158,158,1) 88%, rgba(140,139,139,1) 100%);
+
 background-size: 100vw 100vw;
 }
 
